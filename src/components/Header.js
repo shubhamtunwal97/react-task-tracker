@@ -1,8 +1,14 @@
 import PropTypes from 'prop-types'
+import Button from './Button'
 
 const Header = (props) => {
   return (
-    <h1 style={headingStyle}>{props.titleofHeader}</h1>
+    <>
+    <header className='header' >
+    <h1>{props.titleofHeader}</h1>
+    <Button color = 'green' text = 'Add task' />
+    </header>
+    </>
   )
 }
 
@@ -15,7 +21,7 @@ Header.propTypes = {
 }
 const headingStyle = {
     color : 'black',
-
-    backgroundColor : 'gray',
+    
+    backgroundColor : 'lightgray',
 }
 export default Header
