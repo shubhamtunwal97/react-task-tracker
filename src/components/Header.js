@@ -4,9 +4,11 @@ import Button from './Button'
 const Header = (props) => {
   return (
     <>
+
     <header className='header' >
     <h1>{props.titleofHeader}</h1>
-    <Button color = 'green' text = 'Add task' />
+    <Button color = 'green' text = 'Add task' onClick/>
+    
     </header>
     </>
   )
