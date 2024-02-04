@@ -17,7 +17,7 @@ function App() {
     },
     {
       id: 2,
-      text: 'Meeting with Team',
+      text: 'Hangout with Team',
       day: 'Feb 6th at 10:00am',
       reminder: false,
     },
