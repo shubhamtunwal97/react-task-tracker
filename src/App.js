@@ -4,6 +4,7 @@ import Header from './components/Header';
 import PropTypes from 'prop-types'
 import { useState } from 'react';
 import Tasks from './components/Tasks';
+import AddTask from './components/AddTask';
 
 function App() {
   const name = "shubham"
@@ -35,10 +36,17 @@ function App() {
     },
   ])
 
+// Delete function
+const deleteTask = (id) => {
+  setTasks(tasks.filter((task) => task.id !== id));
+};
+
+
   return (
     <div className="container">
       <Header titleofHeader = "Task manager" />
-      <Tasks tasks={tasks}/>
+      <AddTask />
+      <Tasks tasks={tasks} onDelete = {deleteTask}/>
     </div>
   );
 }
