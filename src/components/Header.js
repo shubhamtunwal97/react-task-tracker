@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types'
 import Button from './Button'
 
-const Header = (props) => {
+const Header = (props, onAdd) => {
   return (
     <>
 
     <header className='header' >
     <h1>{props.titleofHeader}</h1>
-    <Button color = 'green' text = 'Add task' onClick/>
+    <Button color = 'green' text = 'Add task' onClick = {onAdd}/>
     
     </header>
     </>
@@ -15,7 +15,7 @@ const Header = (props) => {
 }
 
 Header.defaultProps ={
-    titleofHeader: "No titel defined",
+    titleofHeader: "Task Manager",
 }
   
 Header.propTypes = {
